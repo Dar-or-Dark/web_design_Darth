@@ -5,10 +5,12 @@
 /* { margin: 0; box-sizing: border-box; } */
 
 body { 
-    font-size: 16px; 
-    line-height: 32px;
-    font-family:Ubuntu,sans-serif;
-    color:#0b0c0b;
+    
+	font-family: 'Arial', sans-serif;
+	background: #000 url('../imagenes/wallhaven-xlpx3z.jpg');
+	background:#414448;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 h1 {
