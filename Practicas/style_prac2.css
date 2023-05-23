@@ -56,7 +56,7 @@ h1{
 }
 
 .galeria a:hover img{
-  filter: blur(0.5px);
+  /*filter: blur(0.5px);*/
   transform: rotate(10deg) scale(1.3);
 }
 
