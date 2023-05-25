@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Routing</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+  <h1>Routing/Enrutamiento</h1>
+
+  <header>
+    <div class="container">
+      <img src="../img-topics/enrutamiento-portada.jpg" alt="">
+      <div class="caption">
+        <h2>Enrutamiento</h2>
+        <p>El enrutamiento es el proceso mediante el cual los datos se dirigen de manera eficiente desde un origen a un destino a través de una red de dispositivos interconectados. En un sistema de red, los enrutadores son los dispositivos clave que se encargan de tomar decisiones de enrutamiento y determinar la mejor ruta para enviar los paquetes de datos.</p>
+      </div>
+
+    </div>
+  </header>
+  
+    <main>
+      <div class="container2">
+      <h2>Introducción al Routing/Enrutamiento</h2>
+      <h3>Decisión de Reenvío de Paquetes de Router</h3>
+            <p>En el tema anterior se discutieron las tablas de enrutamiento de host. La mayoría de las redes también contienen routers, que son dispositivos intermediarios. Los routers también contienen tablas de enrutamiento. En este tema se tratan las operaciones del router en la capa de red. Cuando un host envía un paquete a otro host, consulta su tabla de enrutamiento para determinar dónde enviar el paquete. Si el host de destino está en una red remota, el paquete se reenvía a la puerta de enlace predeterminada, que generalmente es el router local.</p>
+       <h4>¿Qué sucede cuando llega un paquete a la interfaz de un Router?</h4>
+            <p>El Router examina la dirección IP de destino del paquete y busca en su tabla de enrutamiento para determinar dónde reenviar el paquete. La tabla de enrutamiento contiene una lista de todas las direcciones de red conocidas (prefijos) y dónde reenviar el paquete. Estas entradas se conocen como entradas de ruta o <strong>routes</strong>. El Router reenviará el paquete utilizando la mejor (más larga) entrada de ruta coincidente.</p>
+        <img src="../img-topics/img-18.png" alt="">
+        <ul>
+            <li>El paquete llega a la interfaz Gigabit Ethernet 0/0/0 del Router R1. R1 desencapsula el encabezado y el tráiler de Ethernet de capa 2.</li>
+            <li>El Router R1 examina la dirección IPv4 de destino del paquete y busca la mejor coincidencia en su tabla de enrutamiento IPv4. La entrada de ruta indica que este paquete debe reenviarse al Router R2.</li>          
+            <li>El Router R1 encapsula el paquete en un nuevo encabezado y tráiler de Ethernet, y reenvía el paquete al Router de salto R2 siguiente.</li>          
+        </ul>        
+        <img src="../img-topics/img-19.png" alt="">
+      <h3>Tabla de Enrutamiento de Router IP</h3>
+            <p>La tabla de enrutamiento del Router contiene entradas de ruta de red que enumeran todos los posibles destinos de red conocidos.</p>
+          <ul>
+            <li><strong>Redes conectadas directamente:</strong> estas entradas de ruta de red son interfaces de Router activas. Los routers agregan una ruta conectada directamente cuando una interfaz se configura con una dirección IP y se activa. Cada interfaz de Router está conectada a un segmento de red diferente. En la imagen, las redes conectadas directamente en la tabla de enrutamiento R1 IPv4 serían 192.168.10.0/24 y 209.165.200.224/30.</li>
+            <li><strong>Redes remotas:</strong> estas entradas de ruta de red están conectadas a otros routers. Los routers aprenden sobre redes remotas, ya sea mediante la configuración explícita de un administrador o mediante el intercambio de información de ruta mediante un protocolo de enrutamiento dinámico. En la imagen, la red remota en la tabla de enrutamiento R1 IPv4 sería 10.1.1.0/24.</li>
+            <li><strong>Ruta predeterminada:</strong> al igual que un host, la mayoría de los routers también incluyen una entrada de ruta predeterminada, una puerta de enlace de último recurso. La ruta predeterminada se usa cuando no hay una mejor (más larga) coincidencia en la tabla de enrutamiento IP. En la imagen, la tabla de enrutamiento R1 IPv4 probablemente incluiría una ruta predeterminada para reenviar todos los paquetes al Router R2.</li>
+          </ul>
+            <p>La imagen identifica las redes directamente conectadas y remotas del Router R1.</p>
+        <img src="../img-topics/img-20.png" alt="">
+            <p>R1 tiene dos redes conectadas directamente:</p>
+          <ul>
+            <li>192.168.10.0/24</li>
+            <li>209.165.200.224/30</li>        
+          </ul>        
+            <p>R1 también tiene redes remotas (es decir, 10.1.1.0/24 e Internet) sobre las que puede aprender.</p>        
+            <p>Un Router puede aprender sobre redes remotas de una de dos maneras:</p>        
+          <ul>
+            <li><strong>Manualmente:</strong> las redes remotas se ingresan manualmente en la tabla de rutas mediante rutas estáticas.</li>        
+            <li><strong>Dinámicamente:</strong> las rutas remotas se aprenden automáticamente mediante un protocolo de enrutamiento dinámico.</li>        
+          </ul>
+       <h3>Enrutamiento Estático</h3>
+            <p>Las rutas estáticas son entradas de ruta que se configuran manualmente. La imagen muestra un ejemplo de una ruta estática que se configuró manualmente en el Router R1. La ruta estática incluye la dirección de red remota y la dirección IP del Router del siguiente salto.</p>
+        <img src="../img-topics/img-21.png" alt="">
+           <ul>
+            <li>R1 se configura manualmente con una ruta estática para llegar a la red 10.1.1.0/24. Si esta ruta cambia, R1 requerirá una nueva ruta estática.</li>
+            </ul>        
+            <p>Si hay un cambio en la topología de la red, la ruta estática no se actualiza automáticamente y debe reconfigurarse manualmente. Por ejemplo, en la imagen R1 tiene una ruta estática para llegar a la red 10.1.1.0/24 a través de R2. Si esa ruta ya no está disponible, R1 debería reconfigurarse con una nueva ruta estática a la red 10.1.1.0/24 a través de R3. Por lo tanto, el Router R3 necesitaría tener una entrada de ruta en su tabla de enrutamiento para enviar paquetes destinados a 10.1.1.0/24 a R2.</p>
+          <img src="../img-topics/img-22.png" alt="">
+          <ul>
+            <li>Si la ruta desde R1 a través de R2 ya no está disponible, sería necesario configurar una nueva ruta estática a través de R3. Una ruta estática no se ajusta automáticamente a los cambios de topología.</li>
+          </ul>          
+            <p>El enrutamiento estático tiene las siguientes características:</p>          
+          <ul>
+            <li>Una ruta estática debe configurarse manualmente.</li>          
+            <li>El administrador debe reconfigurar una ruta estática si hay un cambio en la topología y la ruta estática ya no es viable.</li>          
+            <li>Una ruta estática es apropiada para una red pequeña y cuando hay pocos enlaces redundantes o ninguno.</li>          
+            <li>Una ruta estática se usa comúnmente con un protocolo de enrutamiento dinámico para configurar una ruta predeterminada</li>          
+          </ul>
+        <h3>Enrutamiento Dinámico</h3>
+            <p>Un protocolo de enrutamiento dinámico permite a los routers aprender automáticamente sobre redes remotas, incluida una ruta predeterminada, de otros routers. Los routers que utilizan protocolos de enrutamiento dinámico comparten automáticamente la información de enrutamiento con otros routers y compensan los cambios de topología sin involucrar al administrador de la red. Si hay un cambio en la topología de la red, los routers comparten esta información utilizando el protocolo de enrutamiento dinámico y actualizan automáticamente sus tablas de enrutamiento.</p>          
+            <p>Los protocolos de enrutamiento dinámico incluyen OSPF y el Enhanced Interior Gateway Routing Protocol (EIGRP). La imagen muestra un ejemplo de routers R1 y R2 que comparten automáticamente información de red utilizando el protocolo de enrutamiento OSPF.</p>
+          <img src="../img-topics/img-23.png" alt="">
+          <ul>
+            <li>R1 está utilizando el protocolo de enrutamiento OSPF para informar a R2 sobre la red 192.168.10.0/24.</li>
+            <li>R2 está utilizando el protocolo de enrutamiento OSPF para informar a R1 sobre la red 10.1.1.0/24.</li>
+          </ul>
+           <p>La configuración básica solo requiere que el administrador de red habilite las redes conectadas directamente dentro del protocolo de enrutamiento dinámico. El protocolo de enrutamiento dinámico hará automáticamente lo siguiente:</p>            
+          <ul>
+            <li>Descubre redes remotas</li>            
+            <li>Mantener información de enrutamiento actualizada</li>            
+            <li>Elija el mejor camino hacia las redes de destino</li>            
+            <li>Intente encontrar una nueva mejor ruta si la ruta actual ya no está disponible.</li>
+          </ul> 
+            <p>Cuando un Router se configura manualmente con una ruta estática o aprende sobre una red remota de forma dinámica mediante un protocolo de enrutamiento dinámico, la dirección de red remota y la dirección del siguiente salto se ingresan en la tabla de enrutamiento IP. Como se muestra en la imagen, si hay un cambio en la topología de la red, los routers se ajustarán automáticamente e intentarán encontrar una nueva mejor ruta.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </main>
+</body>
+</html>
