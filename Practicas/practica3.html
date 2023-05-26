@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="practica3.js"></script>
+  <link rel="stylesheet" href="practica3.css">
+  <title>Practica 3</title>
+</head>
+<body>
+  <h2>1. Desarrolle una función en JavaScript que permita leer una temperatura
+    en grados Celsius y devuelva el clima según la siguiente tabla:</h2>
+    <p>Temperatura Clima</p>
+    <p>-10 °C – 15 °C Frio</p>
+    <p>16°C – 25 °C Templado</p>
+    <p>26°C – 40 °C Calor </p>
+    <div class="Container">
+      <form action="">
+        <p>Ingrese la temperatura en Grados Celsius</p>
+        <input id="gradoscelsius" type="text">
+        <br>
+        <p>Clima</p>
+        <input id="clima" type="text" readonly>
+        <input type="button" name="enviar" class="btn" onclick="temperatura()" value="Calcular">
+      </form>
+    </div>
+    <h2>2. Desarrolle una función en JavaScript que permita leer un numero y
+      devuelva el factorial del mismo.
+      </h2>
+    <p>Ejemplo. N= 5 Proceso 1*2*3*4*5 Resultado = 120</p>
+    <div class="Container">
+      <form action="">
+        <input id="N" type="text">
+        <p>Resultado</p>
+        <input id="resultado" type="text" readonly>
+        <input type="button" class="btn" onclick="factorial()" value="Resultado">
+      </form>
+    </div>
+    <h2>3. Desarrolle una función en JavaScript que muestre el algoritmo Fizz-Buzz
+      (Este algoritmo se basa en que se debe hacer un contador desde el
+      número 1 al número 100, en orden correlativo, pero cada vez que un
+      número sea múltiplo de 3, debe decir Fizz y cada vez que un número sea
+      múltiplo de 5, debe decir Buzz, en el caso que un número sea múltiplo de
+      3 y 5, debe decir FizzBuzz, si el número no es múltiplo de 3 o 5 no
+      mostrara nada)</h2>
+      <div class="Container">
+        <form action="">
+          <p>Ingrese contador</p>
+          <input id="contador" type="text">
+          <textarea name="" id="FizzBuzz" cols="47" rows="15"></textarea>
+          <br>
+          <p>Resultado</p>
+          <input type="button" name="enviar" class="btn" onclick="fizzbuzz()" value="Calcular">
+        </form>
+      </div>
+    <h2>4. Desarrolle una función en JavaScript que muestre la fecha actual.</h2>
+    <p>Ejemplo: Jueves, 24 de Febrero del 2022</p>
+    <div class="Container">
+      <p>Fecha</p>
+      <input id="fecha" type="text" readonly>
+      <input type="button" class="btn" onclick="Fecha()" value="Fecha Actual">
+    </div>
+</body>
+</html>
