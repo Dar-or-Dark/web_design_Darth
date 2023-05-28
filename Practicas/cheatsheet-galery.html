@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/style_galeria.css">
+  <title>CheatSheet</title>
+</head>
+<body>
+  <div class="container-galery">
+    <h1>Galería de CheatSheet</h1>
+    <div class="galery">
+      <div class="image"><img src="../img-topics/1-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/2-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/3-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/4-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/5-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/6-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/7-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/8-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/9-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/10-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/11-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/12-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/13-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/14-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/15-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/16-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/17-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/18-img.png" alt=""></div>
+      <div class="image"><img src="../img-topics/19-img.png" alt=""></div>
+
+    
+    </div>
+    <div class="popup-img">
+      <span>&times;</span>
+      <img src="../img-topics/1-img.png" alt="">
+    </div>
+
+  </div>
+  <script>
+    document.querySelectorAll('.galery img').forEach(image =>{
+        image.onclick = () =>{
+          document.querySelector('.popup-img').style.display = 'block';
+          document.querySelector('.popup-img img').src = image.getAttribute('src');
+
+      }
+    });
+    document.querySelector('.popup-img span').onclick = () =>{
+      document.querySelector('.popup-img').style.display = 'none';
+    }
+
+  </script>
+        
+
+</body>
+</html>
