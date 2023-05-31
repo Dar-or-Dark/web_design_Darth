@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/style_galeria.css">
+  <link rel="stylesheet" href="../CSS/estilos.css">
+ 
+  <title>CheatSheet</title>
+</head>
+<body>
+  <header class="hero">
+		<nav class="nav container">
+			<div class="nav_logo">
+				<h2 class="nav_tittle"> Networking World</h2>
+			</div>
+			<ul class="nav_link nav_link--menu">
+				<li class="nav_items">
+					<a href="../index.html" class="nav_links">Inicio</a>
+					
+				</li>
+				<li class="nav_items">
+
+					<a href="#" class="nav_links">Cursos</a>
+					
+					
+				</li>
+				
+				<li class="nav_items">
+					<a href="../HTML/cheatsheetGalery.html" class="nav_links">Cheatsheets</a>
+					
+				</li>
+				<li class="nav_items">
+					<a href="https://discord.com/channels/746143251446366379/915109774226505748" class="nav_links">Comunidad</a>
+					
+				</li>
+				<li class="nav_items">
+					<a href="../HTML/about_us.html" class="nav_links">Acerca de</a>
+					
+				</li>
+				<img src="../MEDIA/close.svg" alt="cerrar" class="nav_close">
+			</ul>
+			<div class="nav_menu">
+				<img src="../MEDIA/menu.svg" alt="menu" class="nav_img">
+			</div>
+
+		</nav>
+		<section class="hero_container container">
+			<h1 class="hero_title"> Estudiar es más facil con CheatSheets </h1>
+			<p class="hero_paragraph">Atajos y resumenes de todos los temas a tu mano</p>
+			
+		</section>
+
+		
+	</header>
+  <main>
+    <div class="container-galery ">
+      <h1 class="subtitle">Galería de CheatSheet</h1>
+      <div class="galery">
+        <div class="image"><img src="../img-topics/1-img.png" alt="1"></div>
+        <div class="image"><img src="../img-topics/2-img.png" alt="2"></div>
+        <div class="image"><img src="../img-topics/3-img.png" alt="3"></div>
+        <div class="image"><img src="../img-topics/4-img.png" alt="4"></div>
+        <div class="image"><img src="../img-topics/5-img.png" alt="5"></div>
+        <div class="image"><img src="../img-topics/6-img.png" alt="6"></div>
+        <div class="image"><img src="../img-topics/7-img.png" alt="7"></div>
+        <div class="image"><img src="../img-topics/8-img.png" alt="8"></div>
+        <div class="image"><img src="../img-topics/9-img.png" alt="9"></div>
+        <div class="image"><img src="../img-topics/10-img.png" alt="10"></div>
+        <div class="image"><img src="../img-topics/11-img.png" alt="11"></div>
+        <div class="image"><img src="../img-topics/12-img.png" alt="12"></div>
+        <div class="image"><img src="../img-topics/13-img.png" alt="13"></div>
+        <div class="image"><img src="../img-topics/14-img.png" alt="14"></div>
+        <div class="image"><img src="../img-topics/15-img.png" alt="15"></div>
+        <div class="image"><img src="../img-topics/16-img.png" alt="16"></div>
+        <div class="image"><img src="../img-topics/17-img.png" alt="17"></div>
+        <div class="image"><img src="../img-topics/18-img.png" alt="18"></div>
+        <div class="image"><img src="../img-topics/19-img.png" alt="19"></div>
+  
+      
+      </div>
+      <div class="popup-img">
+        <span>&times;</span>
+        <img src="../img-topics/1-img.png" alt="">
+      </div>
+  
+    </div>
+    <script>
+      document.querySelectorAll('.galery img').forEach(image =>{
+          image.onclick = () =>{
+            document.querySelector('.popup-img').style.display = 'block';
+            document.querySelector('.popup-img img').src = image.getAttribute('src');
+  
+        }
+      });
+      document.querySelector('.popup-img span').onclick = () =>{
+        document.querySelector('.popup-img').style.display = 'none';
+      }
+  
+    </script>
+          
+
+  </main>
+  <footer class="footer">
+    <section class="footer_container container">
+      <nav class="nav--footer">
+        <h2 class="footer_title">Networking World</h2>
+        <ul class="nav_link nav_link--footer">
+          <li class="nav_items">
+            <a href="#" class="nav_links">Inicio</a>
+          </li>
+          <li class="nav_items">
+            <a href="#" class="nav_links">Cursos</a>
+          </li>
+          <li class="nav_items">
+            <a href="#" class="nav_links">Cheatsheets</a>
+          </li>
+          <li class="nav_items">
+            <a href="#" class="nav_links">Comunidad</a>
+          </li>
+          <li class="nav_items">
+            <a href="#" class="nav_links">Acerca de</a>
+          </li>
+        </ul>
+
+      </nav>
+      <form class="footer_form" >
+        <h2 class="footer_newsletter">Subscribete a nuestro Blog semanal </h2>
+        <div class="footer_inputs">
+          <input type="email" placeholder="Email:" class="footer_input">
+          <input type="submit" value="Registrate" class="footer_submit">
+        </div>
+      </form>
+    </section>
+    <section class="footer_copy container">
+      <div class="footer_social">
+        <a href="#" class="footer_icons"><img src="../MEDIA/facebook.svg" alt="facebook" class="footer_img"></a>
+        <a href="#" class="footer_icons"><img src="../MEDIA/twitter.svg" alt="twitter" class="footer_img"></a>
+        <a href="#" class="footer_icons"><img src="../MEDIA/youtube.svg" alt="youtube" class="footer_img"></a>
+      </div>
+      <h3 class="footer_copyright">Derechos Reservados &copy; Networking World</h3>
+
+    </section>
+  </footer>
+  <script src="../js/menu.js"></script>
+
+</body>
+</html>

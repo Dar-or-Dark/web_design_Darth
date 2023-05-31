@@ -1,0 +1,106 @@
+/* Estilos generales */
+*{
+  margin:0; padding: 0;
+  box-sizing: border-box;
+
+}
+h1{
+  font-weight: 400;
+  text-align: left;
+  padding: 10px 80px;
+  font-size: 40px;
+}
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+ 
+}
+.par{
+  text-align: center;
+}
+
+.container_t {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  
+}
+
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+}
+.container2 img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+body p{
+  text-align: justify;
+}
+
+/* Estilos del encabezado */
+
+.img_pr{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+    
+}
+.knowledge_picture1{
+  grid-row: 1/2;
+  justify-self: center;
+}
+.texto_general{
+  padding-container: 100px 0;
+}
+
+.comtainer_t img {
+  max-width: 550px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.caption1 {
+  
+  
+}
+.caption{
+  padding-top: 50px;
+}
+
+
+
+
+
+/* Estilos del contenido principal */
+main {
+  margin-top: 20px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header img {
+    margin: 0 auto 20px;
+  }
+  .container_t{
+    display: flex;
+    flex-direction: column;
+  }
+  .container_t img{
+    width: 350px;
+    height: 250px;
+  }
+}
