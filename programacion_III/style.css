@@ -1,49 +1,73 @@
 /* || general styles */
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 html {
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
-}
-
-body {
-  width: 800px;
-  margin: 0 auto;
+    font-family:'Poppins';
+  }
   
+  body {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    -webkit-animation: random 5s infinite;
+    animation: random 5s infinite;
+  }
+  
+  h1, h2 {
+    font-family: 'Faster One', cursive;
+  }
+  
+  /* header styles */
+  
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  
+  header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+    padding: 0.5rem 0;
+    border-bottom: 10px;
+   
+  }
+  
+  /* section styles */
+  
+  section article {
+    width: 33%;
+    float: left;
+  }
+  
+  section p {
+    margin: 5px 0;
+  }
+  
+  section ul {
+    margin-top: 0;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -5px;
+    margin-bottom: 10px;
+  }
+
+@keyframes  random {
+   15% { background-color: rgb(176, 188, 214); } 
+   30% { background-color: rgb(196, 226, 238); } 
+   45% { background-color: rgb(175, 158, 223); } 
+   60% { background-color: rgb(225, 238, 220); }
+   75% { background-color: rgb(211, 182, 235); }  
 }
 
-h1, h2 {
-  font-family: 'Faster One', cursive;
-}
 
-/* header styles */
+div
+{
+ background:#debe94;
 
-h1 {
-  font-size: 4rem;
-  text-align: center;
-}
-
-header p {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* section styles */
-
-section article {
-  width: 33%;
-  float: left;
-}
-
-section p {
-  margin: 5px 0;
-}
-
-section ul {
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 2.5rem;
-  letter-spacing: -5px;
-  margin-bottom: 10px;
+ transition: all 10s ease-out;
 }
