@@ -1,0 +1,41 @@
+{
+  "squadName" : "Academia Hack The Box",
+  "homeTown" : "Academy",
+  "formed" : 2023,
+  "secretBase" : "Super tower",
+  "active" : true,
+  "members" : [
+    {
+      "name" : "John Wick",
+      "age" : 29,
+      "secretIdentity" : "Dan Jukes",
+      "powers" : [
+        "Fortigate",
+        "CCNP",
+        "CCIE"
+      ]
+    },
+    {
+      "name" : "Madame Web",
+      "age" : 39,
+      "secretIdentity" : "Jane Smith",
+      "powers" : [
+        "Azure",
+        "IMB",
+        "Microsoft"
+      ]
+    },
+    {
+      "name" : "Eternal Flame",
+      "age" : 1000000,
+      "secretIdentity" : "Unknown",
+      "powers" : [
+        "eCPPTv2",
+        "OSCP",
+        "LPIC-1",
+        "CCNA",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
